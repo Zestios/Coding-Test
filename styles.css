@@ -24,17 +24,20 @@ html {
 }
 
 html, body {
-  /* font-family: 'Roboto', sans-serif; */
+  font-family: 'Lexend Deca', sans-serif;
   line-height: 1.4;
-  background-color: yellowgreen;
+}
+
+body {
+  font-size: 1.5rem;
+  font-weight: 400;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
 }
 
 ul {
   list-style: none;
-}
-
-p {
-  margin: 5px 0;
 }
 
 img {
@@ -43,15 +46,60 @@ img {
 
 
 /* Sections, boxes, wrappers */
-
+.wrapper {
+  display: flex;
+  width: 60%;
+  margin: 0 auto;
+  border-radius: 6px;
+  overflow: hidden;
+}
 
 
 /* Card styling */
+.card {
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  height: 400px;
+}
 
+.card--1 {
+  background-color: var(--color-primary);
+}
+
+.card--2 {
+  background-color: var(--color-secondary);
+}
+
+.card--3 {
+  background-color: var(--color-tertiary);
+}
+
+.card h2 {
+  color: var(--color-light-gray);
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.card p {
+  color: var(--color-white-trsp);
+}
+
+.card__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+}
 
 
 /* Buttons styling */
 .card .btn {
+  display: inline-block;
   text-decoration: none;
   background-color: var(--color-light-gray);
   border: 1px solid var(--color-light-gray);
@@ -76,15 +124,4 @@ img {
   color: var(--color-light-gray);
   border: 1px solid var(--color-light-gray);
   transition: all .3s;
-}
-
-
-/* Attribution */
-.attribution {
-  font-size: 11px;
-  text-align: center;
-}
-
-.attribution a {
-  color: hsl(228, 45%, 44%);
 }
